@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './styles/App.css';
+import LoginForm from './components/LoginForm/LoginForm';
 
-function App() {
+function App() {  
+ const navigate = useNavigate();
+
+  const admin = {
+    name: 'Administrator',
+    password: '12345'    
+  }
+
+  const setAuth = (auth) => {
+    if (auth) {
+      localStorage.setItem('auth', true);
+      navigate('/home')    
+    } else {
+      alert('Неверные имя пользователя или пароль');
+      localStorage.setItem('auth', false);
+    }    
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <LoginForm admin={admin} setAuth={setAuth}/>      
     </div>
   );
 }

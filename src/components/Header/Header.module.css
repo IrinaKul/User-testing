@@ -1,0 +1,18 @@
+.container {
+    width: 100%;
+    background-color: aliceblue;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    padding: 20px 0 15px 40px;
+}
+
+button {
+    margin: 20px 40px 20px 0;
+}

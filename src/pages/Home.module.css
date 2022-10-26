@@ -1,0 +1,28 @@
+.content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contentBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testTitle {
+    padding: 60px 0 38px 0px;
+}
+
+.usersTitle {
+    padding-top: 58px;
+}
+
+.testImg {
+    width: 40%;
+    cursor: pointer;
+}
+
+.userImg {
+    width: 48%;
+    cursor: pointer;
+}
